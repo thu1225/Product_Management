@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProductManagementApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+    <div id=banner>
+          <h1> BOOK STORE </h1>
+    </div>
+    <div id="columns">
+        <div id="side">
+            <strong> 
+              <a href="#">Home</a><br />
+              <%= link_to 'Products', root_path %><br />
+              <a href="#">News</a><br />
+              <a href="#">Contact</a><br /> </strong>
+        </div>
+        <div id="main">
+            <%= yield %>
+        </div>
+    </div> 
+  </body>
+</html>
